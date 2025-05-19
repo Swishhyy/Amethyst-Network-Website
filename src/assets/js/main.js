@@ -500,7 +500,7 @@ function handleAlternativeApiResponse(data, playerCountElements, statusIndicator
         software: document.getElementById('server-software'),
         ip: document.getElementById('server-ip'),
         motd: document.getElementById('server-motd')
-    };    if (serverElements.version) serverElements.version.textContent = data.server?.name || 'Minecraft';
+    }; if (serverElements.version) serverElements.version.textContent = data.server?.name || 'Minecraft';
     if (serverElements.ip) serverElements.ip.textContent = 'play.amethystnetwork.org';  // Always use fixed domain
     if (serverElements.motd) serverElements.motd.textContent = data.motd || 'A Minecraft Server';
 
