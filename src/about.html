@@ -1,0 +1,115 @@
+---
+layout: base.njk
+title: About - Amethyst Network
+---
+<section class="about-hero">
+  <div class="container">
+    <h1>About Amethyst Network</h1>
+    <p class="lead">A vanilla-enhanced Minecraft server with a focus on community and exploration</p>
+  </div>
+</section>
+
+<section class="about-content">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-section">
+        <h2>Our Story</h2>
+        <p>
+          Amethyst Network was founded in 2024 with the goal of creating a welcoming Minecraft community where players 
+          can enjoy a near-vanilla experience enhanced with carefully selected plugins. Our server is inspired 
+          by the beauty of amethyst geodes in Minecraft, with custom generation of stunning amethyst caves
+          and environments.
+        </p>
+      </div>
+      <div class="about-section">
+        <h2>Our Philosophy</h2>
+        <p>
+          We believe in maintaining the core Minecraft experience while adding quality-of-life improvements 
+          through plugins. We focus on building a respectful community where players of all ages can enjoy 
+          building, exploring, and collaborating without excessive rules or restrictions.
+        </p>
+      </div>
+    </div>
+    
+    <div class="server-specs">
+      <h2>Server Specifications</h2>
+      <ul class="specs-list">
+        <li><strong>Version:</strong> Minecraft Java 1.21.4</li>
+        <li><strong>Server Type:</strong> Paper (optimized Minecraft server)</li>
+        <li><strong>World Size:</strong> 50,000 x 50,000 blocks</li>
+        <li><strong>World Generation:</strong> Custom terrain with enhanced amethyst features</li>
+        <li><strong>Player Slots:</strong> 50 players</li>
+        <li><strong>Difficulty:</strong> Normal</li>
+      </ul>
+    </div>
+    
+    <div class="server-rules">
+      <h2>Server Rules</h2>
+      <ol class="rules-list">
+        <li>Be respectful to all players</li>
+        <li>No griefing or stealing</li>
+        <li>No excessive profanity or inappropriate behavior</li>
+        <li>No client-side modifications that provide unfair advantages</li>
+        <li>Respect the natural environment - no mass deforestation without replanting</li>
+      </ol>
+      <p class="rules-note">
+        Full rules can be found on our Discord server. Joining the server means you agree to follow these rules.
+      </p>
+    </div>
+    
+    <div class="staff-section">
+      <h2>Our Staff Team</h2>
+      <div class="staff-grid">
+        <div class="staff-card">
+          <div class="staff-avatar">
+            <!-- Placeholder for staff avatar -->
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <h3>AmethystOwner</h3>
+          <p class="staff-role">Server Owner & Administrator</p>
+        </div>
+        <div class="staff-card">
+          <div class="staff-avatar">
+            <i class="fas fa-user-cog"></i>
+          </div>
+          <h3>ModeratorOne</h3>
+          <p class="staff-role">Moderator</p>
+        </div>
+        <div class="staff-card">
+          <div class="staff-avatar">
+            <i class="fas fa-user-cog"></i>
+          </div>
+          <h3>ModeratorTwo</h3>
+          <p class="staff-role">Moderator</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="join-cta">
+      <h2>Ready to Join?</h2>
+      <p>Connect to our server using the IP address below and join our Discord community!</p>
+      <div class="minecraft-copy">
+        <span class="server-ip">{{ site.serverIP }}</span>
+        <button class="minecraft-btn copy-ip" onclick="copyIP()">
+          <i class="fas fa-copy"></i> Copy IP
+        </button>
+      </div>
+      <a href="{{ site.discordLink }}" class="btn discord-btn" target="_blank" rel="noopener">
+        <i class="fab fa-discord"></i> Join our Discord
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  function copyIP() {
+    const serverIP = document.querySelector('.server-ip').textContent;
+    navigator.clipboard.writeText(serverIP).then(() => {
+      const copyBtn = document.querySelector('.copy-ip');
+      copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+      setTimeout(() => {
+        copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copy IP';
+      }, 2000);
+    });
+  }
+</script>

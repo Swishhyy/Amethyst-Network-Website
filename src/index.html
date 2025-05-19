@@ -1,0 +1,71 @@
+---
+layout: base.njk
+title: Home - Amethyst Network
+---
+<section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to Amethyst Network</h1>
+    <p class="lead">A vanilla-enhanced Minecraft server experience on version 1.21.4</p>    <div class="minecraft-copy">
+      <span class="clickable-ip" onclick="copyHomeIP()" title="Click to copy server IP">{{ site.serverIP }}</span>
+      <span class="copy-feedback"></span>
+    </div>
+    <div class="call-to-action">
+      <a href="/about/" class="btn primary-btn">Learn More</a>
+      <a href="{{ site.discordLink }}" target="_blank" rel="noopener" class="btn discord-btn"><i class="fab fa-discord"></i> Join Our Discord</a>
+    </div>
+  </div>
+</section>
+
+<section class="server-features">
+  <h2>Server Features</h2>
+  <div class="feature-grid">
+    {% for feature in site.serverFeatures %}
+    <div class="feature-card">
+      <i class="fas fa-gem feature-icon"></i>
+      <p>{{ feature }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="map-preview">
+  <h2>Explore Our World</h2>
+  <div class="map-preview-container">
+    <img src="https://via.placeholder.com/1200x600/5e3b84/ffffff?text=Amethyst+Network+Map" alt="Server Map Preview" class="map-preview-img">
+    <div class="map-overlay">
+      <a href="{{ site.bluemapURL }}" target="_blank" rel="noopener" class="btn primary-btn">
+        <i class="fas fa-map"></i> View Interactive Map
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="server-screenshots">
+  <h2>Server Screenshots</h2>  <div class="screenshot-grid">
+    <div class="screenshot-preview">
+      <img src="https://via.placeholder.com/400x300/5e3b84/ffffff?text=Amethyst+Mountains" alt="Server Screenshot 1">
+    </div>
+    <div class="screenshot-preview">
+      <img src="https://via.placeholder.com/400x300/8547b5/ffffff?text=Crystal+Lake" alt="Server Screenshot 2">
+    </div>
+    <div class="screenshot-preview">
+      <img src="https://via.placeholder.com/400x300/b980e5/000000?text=Spawn+Building" alt="Server Screenshot 3">
+    </div>
+  </div>
+  <div class="view-all">
+    <a href="/screenshots/" class="btn secondary-btn">View All Screenshots</a>
+  </div>
+</section>
+
+<script>
+  function copyIP() {
+    const serverIP = document.querySelector('.server-ip').textContent;
+    navigator.clipboard.writeText(serverIP).then(() => {
+      const copyBtn = document.querySelector('.copy-ip');
+      copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+      setTimeout(() => {
+        copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copy IP';
+      }, 2000);
+    });
+  }
+</script>

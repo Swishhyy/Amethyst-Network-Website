@@ -1,0 +1,21 @@
+<!-- src/_includes/partials/header.njk -->
+<header>
+    <div class="header-content">
+        <h1>{{ site.siteName }}</h1>
+        
+        <div class="server-status">
+            <span class="status-indicator status-online"></span>
+            <span>Server Online: <strong>{{ site.serverIP }}</strong></span>
+        </div>
+    </div>
+      <nav>        <ul>
+            <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="/about/"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="/plugins/"><i class="fas fa-puzzle-piece"></i> Plugins</a></li>
+            <li><a href="/voting/"><i class="fas fa-vote-yea"></i> Voting</a></li>
+            <li><a href="{{ site.bluemapURL }}" target="_blank" rel="noopener"><i class="fas fa-map"></i> BlueMap</a></li>
+            <li><a href="/screenshots/"><i class="fas fa-camera"></i> Screenshots</a></li>
+            <li><a href="{{ site.discordLink }}" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Discord</a></li>
+        </ul>
+    </nav>
+</header>

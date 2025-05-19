@@ -1,0 +1,381 @@
+---
+layout: base.njk
+title: Plugins - Amethyst Network
+permalink: /plugins/index.html
+---
+
+<section class="plugins-header minecraft-section-header">
+  <h1>Server Plugins</h1>
+  <p class="lead">Learn about the plugins that enhance your gameplay experience</p>
+</section>
+
+<div class="section-divider"></div>
+
+<div class="plugins-intro">
+  <p>Amethyst Network runs a carefully selected set of plugins that enhance the vanilla Minecraft experience while preserving its authentic feel. These plugins add quality-of-life improvements, protection systems, and new gameplay elements.</p>
+</div>
+
+<div class="plugin-categories">
+  <button class="category-btn active" data-category="all">All Plugins</button>
+  <button class="category-btn" data-category="protection">Protection</button>
+  <button class="category-btn" data-category="rpg">RPG & Progression</button>
+  <button class="category-btn" data-category="social">Social & Community</button>
+  <button class="category-btn" data-category="utility">Utility</button>
+</div>
+
+<section class="plugins-container">
+  <!-- RPG & Progression Plugins -->
+  <div class="plugin-card" data-category="rpg">
+    <div class="plugin-header">
+      <h2>AuraSkills</h2>
+      <span class="plugin-badge rpg">RPG Leveling</span>
+    </div>
+    <div class="plugin-content">
+      <p>A comprehensive RPG progression system that lets you level up various skills like mining, farming, and combat to unlock special abilities and perks.</p>
+      
+      <div class="plugin-commands">
+        <h3>Basic Commands</h3>
+        <ul>
+          <li><code>/skills</code> - View your skills and levels</li>
+          <li><code>/skills top</code> - View the server's top players for each skill</li>
+          <li><code>/skill [skillname]</code> - View detailed information about a specific skill</li>
+          <li><code>/stats</code> - View your player stats that are affected by your skills</li>
+          <li><code>/mana</code> - Check your current mana level (used for abilities)</li>
+        </ul>
+      </div>
+      
+      <div class="plugin-tutorial">
+        <h3>How to Level Up</h3>
+        <ol>
+          <li>Each skill can be leveled by performing related activities</li>
+          <li>Mining skill increases when mining stone and ores</li>
+          <li>Combat skills increase when fighting mobs</li>
+          <li>Farming increases when harvesting crops</li>
+          <li>Check <code>/skills</code> menu for all available skills and how to level them</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Protection/Land Claiming Plugin -->
+  <div class="plugin-card" data-category="protection">
+    <div class="plugin-header">
+      <h2>Towny</h2>
+      <span class="plugin-badge protection">Land Claiming</span>
+    </div>
+    <div class="plugin-content">
+      <p>Create and join towns with other players, claim territory, and build communities with advanced protection and permissions systems.</p>
+      
+      <div class="plugin-commands">
+        <h3>Basic Commands</h3>
+        <ul>
+          <li><code>/town new [townname]</code> - Create a new town</li>
+          <li><code>/town claim</code> - Claim the chunk you're standing in for your town</li>
+          <li><code>/town add [player]</code> - Invite a player to your town</li>
+          <li><code>/town join [townname]</code> - Join a town that invited you</li>
+          <li><code>/plot fs [amount]</code> - Put your plot up for sale</li>
+          <li><code>/t spawn</code> - Teleport to your town's spawn point</li>
+        </ul>
+      </div>
+      
+      <div class="plugin-tutorial">
+        <h3>Getting Started with Towny</h3>
+        <ol>
+          <li>Earn enough money to start a town (use <code>/bal</code> to check balance)</li>
+          <li>Use <code>/town new [name]</code> to create your town</li>
+          <li>Use <code>/town claim</code> to claim the land around you</li>
+          <li>Invite friends with <code>/town add [player]</code></li>
+          <li>Set up plots with <code>/plot set [type]</code> (shop, arena, etc.)</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Combat & Mobs Plugin -->
+  <div class="plugin-card" data-category="rpg">
+    <div class="plugin-header">
+      <h2>MythicMobs</h2>
+      <span class="plugin-badge rpg">Custom Mobs & Boss Fights</span>
+    </div>
+    <div class="plugin-content">
+      <p>Enhances your combat experience with custom mobs, epic boss fights, and special loot drops that provide unique challenges and rewards.</p>
+      
+      <div class="plugin-info">
+        <h3>Features</h3>
+        <ul>
+          <li>Custom bosses with unique abilities and attack patterns</li>
+          <li>Special mobs with enhanced AI and behavior</li>
+          <li>Rare loot drops with custom enchantments</li>
+          <li>Scheduled boss events with server-wide notifications</li>
+          <li>Progressive difficulty scaling with player gear</li>
+        </ul>
+      </div>
+      
+      <div class="plugin-tutorial">
+        <h3>Boss Fight Tips</h3>
+        <ol>
+          <li>Boss spawn locations are marked on the server map</li>
+          <li>Bosses have special abilities - watch for visual cues</li>
+          <li>Some bosses require specific strategies or items</li>
+          <li>Team up with other players for tougher bosses</li>
+          <li>Higher difficulty bosses drop better loot</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Custom Items Plugin -->
+  <div class="plugin-card" data-category="rpg">
+    <div class="plugin-header">
+      <h2>ExecutableItems</h2>
+      <span class="plugin-badge rpg">Custom Items</span>
+    </div>
+    <div class="plugin-content">
+      <p>Discover and craft unique items with special abilities, custom textures, and powerful effects that can be found throughout the world.</p>
+      
+      <div class="plugin-info">
+        <h3>Features</h3>
+        <ul>
+          <li>Custom weapons with unique abilities</li>
+          <li>Special armor sets with set bonuses</li>
+          <li>Magical tools that enhance resource gathering</li>
+          <li>Custom textures for unique visual appearances</li>
+          <li>Items with active and passive abilities</li>
+        </ul>
+      </div>
+      
+      <div class="plugin-tutorial">
+        <h3>How to Use Custom Items</h3>
+        <ol>
+          <li>Custom items can be found in dungeon chests, boss drops, or crafted</li>
+          <li>Right-click to activate special abilities (if available)</li>
+          <li>Some items have passive effects that are always active</li>
+          <li>Certain items may require mana or cooldowns for abilities</li>
+          <li>Check item lore for information on how to use each item</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="plugin-card" data-category="protection">
+    <div class="plugin-header">
+      <h2>CoreProtect</h2>
+      <span class="plugin-badge protection">Protection</span>
+    </div>
+    <div class="plugin-content">
+      <p>Track and restore block changes in case of grief or accidents. Our staff uses this tool to investigate and revert unwanted changes.</p>
+      
+      <div class="plugin-commands">
+        <h3>Staff Commands</h3>
+        <p>While regular players cannot use these commands, you can report incidents to staff who will use CoreProtect to:</p>
+        <ul>
+          <li>Check who placed or broke blocks in an area</li>
+          <li>Restore modified terrain after grief</li>
+          <li>Track item transactions and inventory changes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Economy Plugins -->
+  <div class="plugin-card" data-category="economy">
+    <div class="plugin-header">
+      <h2>Vault & Economy</h2>
+      <span class="plugin-badge economy">Economy</span>
+    </div>
+    <div class="plugin-content">
+      <p>Our server features a player-driven economy where you can earn, spend, and trade Amethyst Crystals (our server currency).</p>
+      
+      <div class="plugin-commands">
+        <h3>Basic Commands</h3>
+        <ul>
+          <li><code>/balance</code> - Check your current balance</li>
+          <li><code>/pay [player] [amount]</code> - Send money to another player</li>
+          <li><code>/baltop</code> - View the richest players on the server</li>
+        </ul>
+      </div>
+      
+      <div class="plugin-tutorial">
+        <h3>How to Earn Money</h3>
+        <ul>
+          <li>Selling items to other players</li>
+          <li>Completing server quests and challenges</li>
+          <li>Participating in server events</li>
+          <li>Finding special amethyst crystal ores in caves</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Utility Plugins -->
+  <div class="plugin-card" data-category="utility">
+    <div class="plugin-header">
+      <h2>BlueMap</h2>
+      <span class="plugin-badge utility">Utility</span>
+    </div>
+    <div class="plugin-content">
+      <p>BlueMap provides a beautiful 3D map of our server world that you can view in your browser. Explore the terrain, locate biomes, and find your way around.</p>
+      
+      <div class="plugin-tutorial">
+        <h3>How to Use BlueMap</h3>
+        <ol>
+          <li>Visit <a href="{{ site.bluemapURL }}" target="_blank" rel="noopener">our BlueMap</a> in your browser</li>
+          <li>Navigate the map using your mouse to pan and zoom</li>
+          <li>Toggle different map layers using the controls in the top-right</li>
+          <li>Find players and points of interest on the map</li>
+        </ol>
+      </div>
+      
+      <div class="plugin-button-container">
+        <a href="{{ site.bluemapURL }}" target="_blank" rel="noopener" class="minecraft-btn primary">
+          <i class="fas fa-map"></i> Open BlueMap
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="plugin-card" data-category="utility">
+    <div class="plugin-header">
+      <h2>EssentialsX</h2>
+      <span class="plugin-badge utility">Utility</span>
+    </div>
+    <div class="plugin-content">
+      <p>EssentialsX provides a variety of quality-of-life commands and features that enhance your gameplay experience.</p>
+      
+      <div class="plugin-commands">
+        <h3>Useful Commands</h3>
+        <ul>
+          <li><code>/home</code> - Teleport to your home location</li>
+          <li><code>/sethome [name]</code> - Set a home location</li>
+          <li><code>/tpa [player]</code> - Request to teleport to another player</li>
+          <li><code>/spawn</code> - Return to the server spawn point</li>
+          <li><code>/msg [player] [message]</code> - Send a private message</li>
+          <li><code>/afk</code> - Mark yourself as away from keyboard</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Fun Plugins -->
+  <div class="plugin-card" data-category="fun">
+    <div class="plugin-header">
+      <h2>AmethystEnhancements</h2>
+      <span class="plugin-badge fun">Fun</span>
+    </div>
+    <div class="plugin-content">
+      <p>Our custom plugin that adds special abilities and features related to amethyst crystals throughout the world.</p>
+      
+      <div class="plugin-features">
+        <h3>Custom Features</h3>
+        <ul>
+          <li>Enhanced amethyst crystals with special properties when mined</li>
+          <li>Amethyst crystal caves with unique mob spawns</li>
+          <li>Craftable amethyst tools and armor with special enchantments</li>
+          <li>Rare amethyst geode structures with valuable loot</li>
+        </ul>
+      </div>
+      
+      <div class="plugin-tutorial">
+        <h3>Amethyst Crystal Types</h3>
+        <div class="crystal-types">
+          <div class="crystal-type">
+            <span class="crystal-name">Regular Amethyst</span>
+            <span class="crystal-desc">Used for basic crafting and currency</span>
+          </div>
+          <div class="crystal-type">
+            <span class="crystal-name">Charged Amethyst</span>
+            <span class="crystal-desc">Provides night vision when held</span>
+          </div>
+          <div class="crystal-type">
+            <span class="crystal-name">Resonant Amethyst</span>
+            <span class="crystal-desc">Emits particles and can be used in special recipes</span>
+          </div>
+          <div class="crystal-type">
+            <span class="crystal-name">Pure Amethyst</span>
+            <span class="crystal-desc">Extremely rare, used for the most powerful items</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Social & Communication Plugins -->
+  <div class="plugin-card" data-category="social">
+    <div class="plugin-header">
+      <h2>Simple Voice Chat</h2>
+      <span class="plugin-badge social">Communication</span>
+    </div>
+    <div class="plugin-content">
+      <p>Talk with nearby players using real-time voice chat, creating a more immersive multiplayer experience.</p>
+      
+      <div class="plugin-info">
+        <h3>Features</h3>
+        <ul>
+          <li>Proximity-based voice chat (players can only hear others who are nearby)</li>
+          <li>Adjustable voice chat range</li>
+          <li>Push-to-talk or voice activation options</li>
+          <li>Group chat channels for teams and towns</li>
+          <li>Compatible with the Simple Voice Chat mod</li>
+        </ul>
+      </div>
+      
+      <div class="plugin-tutorial">
+        <h3>How to Use Voice Chat</h3>
+        <ol>
+          <li>Install the <a href="https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat" target="_blank">Simple Voice Chat mod</a> for your client</li>
+          <li>Connect to our server as normal</li>
+          <li>Press V (default key) to open the voice chat settings</li>
+          <li>Configure your microphone and other preferences</li>
+          <li>Press the configured key (default: CAPS LOCK) to talk</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  
+  <!-- NPC Plugin -->
+  <div class="plugin-card" data-category="social">
+    <div class="plugin-header">
+      <h2>Citizens</h2>
+      <span class="plugin-badge social">NPCs</span>
+    </div>
+    <div class="plugin-content">
+      <p>Interact with custom NPCs throughout the world that serve as quest givers, merchants, and guides for server features.</p>
+      
+      <div class="plugin-info">
+        <h3>Features</h3>
+        <ul>
+          <li>Interactive NPCs with dialogue options</li>
+          <li>Quest NPCs that give and track progress on server quests</li>
+          <li>Merchant NPCs with special shops and unique items</li>
+          <li>Guide NPCs that provide information about server features</li>
+          <li>NPCs with unique appearances and skins</li>
+        </ul>
+      </div>
+      
+      <div class="plugin-tutorial">
+        <h3>How to Interact with NPCs</h3>
+        <ol>
+          <li>Approach an NPC in the world</li>
+          <li>Right-click on the NPC to start a conversation</li>
+          <li>Click on dialogue options to navigate conversations</li>
+          <li>Some NPCs may offer quests, shops, or other interactions</li>
+          <li>Look for NPCs in towns, at spawn, and other important locations</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<div class="plugin-note">
+  <h3>Note About Plugins</h3>
+  <p>Our server is regularly updated with new plugins and features. If you have suggestions for plugins that would enhance the player experience while maintaining our vanilla+ feel, please share them on our Discord server!</p>
+  
+  <div class="discord-invite">
+    <a href="{{ site.discordLink }}" target="_blank" rel="noopener" class="minecraft-btn">
+      <i class="fab fa-discord"></i> Join our Discord
+    </a>
+  </div>
+</div>

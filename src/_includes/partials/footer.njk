@@ -1,0 +1,32 @@
+<!-- src/_includes/partials/footer.njk -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Server Info</h3>            <p class="server-ip">
+                <i class="fas fa-server"></i> Play on: 
+                <span id="server-ip" class="clickable-ip" onclick="copyIP()" title="Click to copy server IP">{{ site.serverIP }}</span>
+                <span class="copy-feedback"></span>
+            </p>
+            <p>Minecraft Version: <strong>1.21.4</strong></p>
+            <p>Players Online: <span class="player-count">Loading...</span></p>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Links</h3>            <ul class="footer-links">
+                <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="/plugins"><i class="fas fa-puzzle-piece"></i> Plugins</a></li>
+                <li><a href="/voting"><i class="fas fa-vote-yea"></i> Voting</a></li>
+                <li><a href="{{ site.bluemapURL }}" target="_blank" rel="noopener"><i class="fas fa-map"></i> BlueMap</a></li>
+                <li><a href="/screenshots"><i class="fas fa-camera"></i> Screenshots</a></li>
+                <li><a href="{{ site.discordLink }}" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Join our Discord</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; {{ site.year }} {{ site.siteName }}. All rights reserved.</p>
+        <p class="minecraft-font">Minecraft is a registered trademark of Mojang AB. 
+        This site is not affiliated with Mojang AB.</p>
+    </div>
+</footer>

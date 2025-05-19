@@ -1,0 +1,31 @@
+{
+  "name": "amethyst-network-website",
+  "version": "1.0.0",
+  "description": "A Website made for Amethyst Network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "dev": "eleventy --serve --quiet",
+    "clean": "rimraf _site",
+    "clean:build": "rimraf _site && eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Swishhyy/Amethyst-Network-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Swishhyy/Amethyst-Network-Website/issues"
+  },
+  "homepage": "https://github.com/Swishhyy/Amethyst-Network-Website#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
+    "rimraf": "^6.0.1"
+  }
+}
