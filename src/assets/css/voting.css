@@ -1,0 +1,339 @@
+/* Voting Page Styles */
+.voting-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("/assets/images/voting-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 8rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.voting-hero h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(185, 128, 229, 0.6);
+  margin-bottom: 1rem;
+}
+
+/* Server Status Widget */
+.server-status-widget {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 550px;
+  margin: 1.5rem auto 0;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 15px rgba(185, 128, 229, 0.3);
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.status-indicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #888;
+  margin-right: 0.5rem;
+}
+
+.status-online {
+  background-color: #4caf50;
+  box-shadow: 0 0 8px #4caf50;
+}
+
+.status-offline {
+  background-color: #f44336;
+  box-shadow: 0 0 8px #f44336;
+}
+
+.status-api-error {
+  background-color: #ffcc00;
+  box-shadow: 0 0 8px #ffcc00;
+}
+
+.player-count-display {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.player-count-display i {
+  color: var(--primary-color);
+  margin-right: 0.3rem;
+}
+
+.player-count-bar-container {
+  width: 100%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  margin-top: 0.8rem;
+  overflow: hidden;
+}
+
+.player-count-bar {
+  height: 100%;
+  width: 0; /* Initial width, will be updated by JavaScript */
+  background: linear-gradient(to right, #4caf50, var(--primary-color));
+  border-radius: 3px;
+  transition: width 1s ease-in-out;
+}
+
+/* New server details styles */
+.server-details {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.server-detail {
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.server-detail i {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+  width: 16px;
+  text-align: center;
+}
+
+#server-motd {
+  font-style: italic;
+  color: #ddd;
+}
+
+/* Online players list */
+.online-players-container {
+  margin-top: 1.2rem;
+  border-top: 1px solid rgba(185, 128, 229, 0.3);
+  padding-top: 1rem;
+}
+
+.online-players-header {
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-bottom: 0.6rem;
+  font-weight: bold;
+}
+
+.online-players-header i {
+  margin-right: 0.5rem;
+}
+
+.online-players-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-height: 100px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.player-item {
+  background-color: rgba(185, 128, 229, 0.2);
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.empty-list {
+  color: #999;
+  font-style: italic;
+  padding: 0.3rem;
+}
+
+.last-updated {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.voting-info {
+  padding: 3rem 0;
+  background-color: var(--bg-medium);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.rewards-list {
+  list-style-type: none;
+  background-color: var(--bg-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.rewards-list li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.rewards-list li i {
+  color: var(--primary-color);
+  margin-right: 0.8rem;
+}
+
+.voting-sites {
+  padding: 3rem 0;
+}
+
+.voting-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.voting-site {
+  background-color: var(--bg-medium);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(185, 128, 229, 0.1);
+}
+
+.voting-site:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(185, 128, 229, 0.2);
+}
+
+.voting-site h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.site-description {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  min-height: 3rem;
+}
+
+.voting-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.voting-btn:hover {
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 15px rgba(185, 128, 229, 0.5);
+}
+
+.voting-note {
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background-color: rgba(185, 128, 229, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.voting-leaderboard {
+  padding: 3rem 0;
+  background-color: var(--bg-medium);
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.leaderboard {
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+.leaderboard-header {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr;
+  padding: 1rem;
+  background-color: var(--tertiary-color);
+  font-weight: bold;
+  text-align: center;
+}
+
+.leaderboard-item {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(185, 128, 229, 0.2);
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.leaderboard-item:hover {
+  background-color: rgba(185, 128, 229, 0.1);
+}
+
+.top-voter {
+  background-color: rgba(185, 128, 229, 0.2);
+}
+
+.rank-col {
+  font-weight: bold;
+}
+
+.top-voter .rank-col,
+.top-voter .player-col {
+  color: var(--primary-color);
+}
+
+.top-voter .fas {
+  color: gold;
+  margin-right: 0.5rem;
+}
+
+.voting-faq {
+  padding: 3rem 0;
+}
+
+.faq-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.faq-item {
+  background-color: var(--bg-medium);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid rgba(185, 128, 229, 0.1);
+}
+
+.faq-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+}
+
+/* Plugin Page Updated Styles */
+.plugin-card[data-category="social"] .plugin-badge.social {
+  background-color: #42a5f5;
+}
+
+@media (max-width: 768px) {
+  .leaderboard-header,
+  .leaderboard-item {
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr;
+    font-size: 0.9rem;
+  }
+
+  .faq-items {
+    grid-template-columns: 1fr;
+  }
+}

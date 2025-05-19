@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | {{ site.siteName }} - Minecraft Server</title>
+    <meta name="description" content="{{ site.siteDescription }}">
+    <link rel="stylesheet" href="/assets/css/Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="/assets/images/amethyst-favicon.png">
+</head>
+<body>
+    <div class="particle-container">
+        <div class="particle p1"></div>
+        <div class="particle p2"></div>
+        <div class="particle p3"></div>
+        <div class="particle p4"></div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <h1>{{ site.siteName }}</h1>
+            
+            <div class="server-status">
+                <span class="status-indicator status-online"></span>
+                <span>Server Online: <strong>{{ site.serverIP }}</strong></span>
+            </div>
+        </div>        <nav>
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/about/"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="/blog/"><i class="fas fa-scroll"></i> News</a></li>
+                <li><a href="/server-map/"><i class="fas fa-map"></i> Server Map</a></li>
+                <li><a href="/screenshots/"><i class="fas fa-camera"></i> Screenshots</a></li>
+                <li><a href="{{ site.discordLink }}" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+                <!-- Add more navigation items as needed -->
+            </ul>
+        </nav>
+    </header>
+      <main>
+        {{ content | safe }}
+    </main>
+      <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Server Info</h3>
+                <p class="server-ip">
+                    <i class="fas fa-server"></i> Play on: 
+                    <span id="server-ip">{{ site.serverIP }}</span>
+                    <button class="minecraft-btn copy-ip" onclick="copyIP()">
+                        <i class="fas fa-copy"></i> 
+                        <span class="copy-ip-text">{{ site.serverIP }}</span>
+                    </button>
+                </p>
+                <p>Minecraft Version: <strong>1.21.4</strong></p>
+                <p>Players Online: <span class="player-count">Loading...</span></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul class="footer-links">
+                    <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="/about"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="/blog"><i class="fas fa-scroll"></i> News</a></li>
+                    <li><a href="{{ site.discordLink }}" target="_blank"><i class="fab fa-discord"></i> Join our Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; {{ site.year }} {{ site.siteName }}. All rights reserved.</p>
+            <p class="minecraft-font">Minecraft is a registered trademark of Mojang AB. 
+            This site is not affiliated with Mojang AB.</p>        </div>
+    </footer>    
+    <script src="/assets/js/main.js"></script>
+    {% if title == "Server Map - Amethyst Network" %}
+    <script src="/assets/js/server-map.js"></script>
+    {% endif %}
+    {% if title == "Screenshots - Amethyst Network" %}
+    <script src="/assets/js/screenshots.js"></script>
+    {% endif %}
+    <script>
+    function copyIP() {
+        const ip = document.getElementById('server-ip').textContent;
+        navigator.clipboard.writeText(ip).then(() => {
+            alert('Server IP copied to clipboard!');
+        });
+    }
+    
+    function copyHomeIP() {
+        const ip = document.getElementById('home-server-ip').textContent;
+        navigator.clipboard.writeText(ip).then(() => {
+            alert('Server IP copied to clipboard!');
+        });
+    }
+    </script>
+</body>
+</html>

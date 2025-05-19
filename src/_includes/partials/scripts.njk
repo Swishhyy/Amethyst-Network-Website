@@ -1,0 +1,78 @@
+<!-- src/_includes/partials/scripts.njk -->
+<script src="/assets/js/main.js"></script>
+
+{% if title == "Server Map - Amethyst Network" %}
+<script src="/assets/js/server-map.js"></script>
+{% endif %}
+
+{% if title == "Plugins - Amethyst Network" %}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize plugin cards as collapsed by default
+    const pluginHeaders = document.querySelectorAll('.plugin-header');
+    
+    pluginHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const card = header.closest('.plugin-card');
+            card.classList.toggle('active');
+        });
+    });
+    
+    // Category filtering
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    const pluginCards = document.querySelectorAll('.plugin-card');
+    
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            const category = button.dataset.category;
+            
+            // Show all cards or filter by category
+            pluginCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
+{% endif %}
+
+<script>
+function showCopyFeedback(element) {
+    // Find the closest copy-feedback element
+    const feedback = element.nextElementSibling || 
+                    element.parentElement.querySelector('.copy-feedback');
+                    
+    if (feedback) {
+        feedback.textContent = "Copied!";
+        feedback.classList.add('active');
+        
+        setTimeout(() => {
+            feedback.textContent = "";
+            feedback.classList.remove('active');
+        }, 2000);
+    }
+}
+
+function copyIP() {
+    const ip = document.getElementById('server-ip').textContent;
+    navigator.clipboard.writeText(ip).then(() => {
+        showCopyFeedback(document.getElementById('server-ip'));
+    });
+}
+
+function copyHomeIP() {
+    const ip = document.querySelector('.minecraft-copy .clickable-ip').textContent;
+    navigator.clipboard.writeText(ip).then(() => {
+        showCopyFeedback(document.querySelector('.minecraft-copy .clickable-ip'));
+    });
+}
+</script>

@@ -1,0 +1,266 @@
+---
+layout: base.njk
+title: Voting - Amethyst Network
+---
+
+<section class="voting-hero">
+  <div class="container">
+    <h1>Vote for Amethyst Network</h1>
+    <p class="lead">Support our server by voting on Minecraft server lists</p>
+    <div class="server-status-widget">
+      <div class="status-badge">
+        <span class="status-indicator"></span>
+        <span class="status-text">Checking...</span>
+      </div>
+      <div class="player-count-display">
+        <i class="fas fa-users"></i> Players Online:
+        <span class="player-count">-</span>/<span class="player-max">-</span>
+      </div>
+      <div class="player-count-bar-container">
+        <div id="player-count-bar" class="player-count-bar"></div>
+      </div>
+      <div class="server-details">
+        <div class="server-detail">
+          <i class="fas fa-server"></i> Version:
+          <span id="server-version">-</span>
+        </div>
+        <div class="server-detail">
+          <i class="fas fa-code-branch"></i> Software:
+          <span id="server-software">-</span>
+        </div>
+        <div class="server-detail">
+          <i class="fas fa-network-wired"></i> IP: <span id="server-ip">-</span>
+        </div>
+        <div class="server-detail">
+          <i class="fas fa-comment-alt"></i> MOTD:
+          <span id="server-motd">-</span>
+        </div>
+      </div>
+      <div class="online-players-container">
+        <div class="online-players-header">
+          <i class="fas fa-user-friends"></i> Online Players
+        </div>
+        <div id="online-players-list" class="online-players-list">
+          <span class="empty-list">Checking...</span>
+        </div>
+      </div>
+      <div class="last-updated">
+        Updated: <span id="last-updated-time">checking...</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="voting-info">
+  <div class="container">
+    <div class="voting-description">
+      <h2>Why Vote?</h2>
+      <p>
+        Voting for our server helps us gain visibility on Minecraft server
+        lists, bringing in new players and helping our community grow. As a
+        thank you for your support, you'll receive rewards for each vote!
+      </p>
+
+      <div class="voting-rewards">
+        <h3>Voting Rewards</h3>
+        <ul class="rewards-list">
+          <li>
+            <i class="fas fa-gem"></i>
+            <strong>5 Amethyst Shards</strong> (server currency) per vote
+          </li>
+          <li>
+            <i class="fas fa-gift"></i> <strong>Random loot box</strong> with a
+            chance for rare items
+          </li>
+          <li>
+            <i class="fas fa-award"></i> <strong>Voting streaks</strong> grant
+            additional rewards
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="voting-sites">
+  <div class="container">
+    <h2>Voting Sites</h2>
+    <p>
+      Click on each site to vote. Remember to use the same Minecraft username on
+      all sites!
+    </p>
+    <div class="voting-list">
+      <div class="voting-site">
+        <h3>Minecraft-Server.net</h3>
+        <p class="site-description">
+          One of the most popular Minecraft server listing sites
+        </p>
+        <a
+          href="https://minecraft-server.net/vote/AmethystNetwork/"
+          target="_blank"
+          rel="noopener"
+          class="minecraft-btn voting-btn"
+        >
+          <i class="fas fa-vote-yea"></i> Vote on Minecraft-Server.net
+        </a>
+      </div>
+
+      <div class="voting-site">
+        <h3>Planet Minecraft</h3>
+        <p class="site-description">
+          A community-driven Minecraft resource site
+        </p>
+        <a
+          href="https://www.planetminecraft.com/server/amethyst-network/vote/"
+          target="_blank"
+          rel="noopener"
+          class="minecraft-btn voting-btn"
+        >
+          <i class="fas fa-vote-yea"></i> Vote on Planet Minecraft
+        </a>
+      </div>
+
+      <div class="voting-site">
+        <h3>MinecraftServers.org</h3>
+        <p class="site-description">
+          A comprehensive list of Minecraft servers
+        </p>
+        <a
+          href="https://minecraftservers.org/vote/646301"
+          target="_blank"
+          rel="noopener"
+          class="minecraft-btn voting-btn"
+        >
+          <i class="fas fa-vote-yea"></i> Vote on MinecraftServers.org
+        </a>
+      </div>
+
+      <div class="voting-site">
+        <h3>TopG.org</h3>
+        <p class="site-description">A gaming server list for various games</p>
+        <a
+          href="https://topg.org/minecraft-servers/server-631653"
+          target="_blank"
+          rel="noopener"
+          class="minecraft-btn voting-btn"
+        >
+          <i class="fas fa-vote-yea"></i> Vote on TopG.org
+        </a>
+      </div>
+
+      <div class="voting-site">
+        <h3>Minecraft MP</h3>
+        <p class="site-description">Find multiplayer Minecraft servers</p>
+        <a
+          href="https://www.minecraft-mp.com/server/280154/vote/"
+          target="_blank"
+          rel="noopener"
+          class="minecraft-btn voting-btn"
+        >
+          <i class="fas fa-vote-yea"></i> Vote on Minecraft MP
+        </a>
+      </div>
+    </div>
+
+    <div class="voting-note">
+      <p>
+        <i class="fas fa-info-circle"></i> You can vote once every 24 hours on
+        each site. More voting sites will be added soon!
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="voting-leaderboard">
+  <div class="container">
+    <h2>Top Voters This Month</h2>
+    <p>Our most supportive community members!</p>
+
+    <div class="leaderboard">
+      <div class="leaderboard-header">
+        <div class="rank-col">Rank</div>
+        <div class="player-col">Player</div>
+        <div class="votes-col">Votes</div>
+        <div class="streak-col">Streak</div>
+      </div>
+
+      <div class="leaderboard-item top-voter">
+        <div class="rank-col">1</div>
+        <div class="player-col">
+          <i class="fas fa-crown"></i> DiamondMiner44
+        </div>
+        <div class="votes-col">28</div>
+        <div class="streak-col">14 days</div>
+      </div>
+
+      <div class="leaderboard-item">
+        <div class="rank-col">2</div>
+        <div class="player-col">AmethystHunter</div>
+        <div class="votes-col">25</div>
+        <div class="streak-col">12 days</div>
+      </div>
+
+      <div class="leaderboard-item">
+        <div class="rank-col">3</div>
+        <div class="player-col">CrystalCrafter</div>
+        <div class="votes-col">21</div>
+        <div class="streak-col">8 days</div>
+      </div>
+
+      <div class="leaderboard-item">
+        <div class="rank-col">4</div>
+        <div class="player-col">EmeraldExplorer</div>
+        <div class="votes-col">18</div>
+        <div class="streak-col">6 days</div>
+      </div>
+
+      <div class="leaderboard-item">
+        <div class="rank-col">5</div>
+        <div class="player-col">RedstoneWizard</div>
+        <div class="votes-col">15</div>
+        <div class="streak-col">5 days</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="voting-faq">
+  <div class="container">
+    <h2>Voting FAQ</h2>
+
+    <div class="faq-items">
+      <div class="faq-item">
+        <h3>How often can I vote?</h3>
+        <p>
+          You can vote once per 24 hours on each voting site. With 5 voting
+          sites, that's up to 5 votes per day!
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>When do I receive my rewards?</h3>
+        <p>
+          Rewards are delivered automatically when you are online. If you vote
+          while offline, you'll receive your rewards the next time you log in.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is a voting streak?</h3>
+        <p>
+          A voting streak is when you vote every day without missing a day. The
+          longer your streak, the better rewards you'll receive!
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What can I do with the rewards?</h3>
+        <p>
+          Amethyst Shards can be used in the server shop to purchase items,
+          upgrades, and special perks. Loot boxes contain random items ranging
+          from common to legendary rarity.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

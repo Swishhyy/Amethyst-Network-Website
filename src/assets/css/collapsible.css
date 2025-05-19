@@ -1,0 +1,105 @@
+/* Collapsible Plugin Containers */
+.plugin-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+.plugin-card.active .plugin-content {
+  max-height: 2000px; /* High enough to accommodate content */
+  transition: max-height 0.6s ease-in;
+}
+
+.plugin-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+.plugin-header::after {
+  content: "\f078"; /* Font Awesome chevron-down */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.plugin-card.active .plugin-header::after {
+  transform: rotate(180deg);
+}
+
+.plugin-card {
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--bg-light);
+  border-radius: 8px;
+  background-color: var(--bg-medium);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+}
+
+.plugin-card.active {
+  box-shadow: 0 6px 15px rgba(94, 59, 132, 0.3);
+  transform: translateY(-2px);
+}
+
+.plugin-content {
+  padding: 0 1.5rem;
+}
+
+.plugin-card.active .plugin-content {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.plugin-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-left: 1rem;
+}
+
+.badge-rpg {
+  background-color: var(--secondary-color);
+}
+
+.badge-protection {
+  background-color: var(--tertiary-color);
+}
+
+.badge-utility {
+  background-color: #5b507a;
+}
+
+.badge-social {
+  background-color: #6a5aad;
+}
+
+.badge-economy {
+  background-color: #a37c40;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.empty-state h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
