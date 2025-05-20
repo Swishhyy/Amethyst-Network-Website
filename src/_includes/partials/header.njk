@@ -1,14 +1,14 @@
 <!-- src/_includes/partials/header.njk -->
 <header>
     <div class="header-content">
-        <h1>{{ site.siteName }}</h1>
+        <h1><img src="/assets/images/favicon.png" alt="Amethyst Network Logo" class="site-logo"> {{ site.siteName }}</h1>
         
         <div class="server-status">
             <span class="status-indicator status-online"></span>
             <span>Server Online: <strong>{{ site.serverIP }}</strong></span>
         </div>
     </div>
-    <nav>        <ul>
+    <nav><ul>
             <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="/plugins/"><i class="fas fa-puzzle-piece"></i> Plugins</a></li>
             <li><a href="/voting/"><i class="fas fa-vote-yea"></i> Voting</a></li>

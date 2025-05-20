@@ -6,43 +6,7 @@
 {% endif %}
 
 {% if title == "Plugins - Amethyst Network" %}
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize plugin cards as collapsed by default
-    const pluginHeaders = document.querySelectorAll('.plugin-header');
-    
-    pluginHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const card = header.closest('.plugin-card');
-            card.classList.toggle('active');
-        });
-    });
-    
-    // Category filtering
-    const categoryButtons = document.querySelectorAll('.category-btn');
-    const pluginCards = document.querySelectorAll('.plugin-card');
-    
-    categoryButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remove active class from all buttons
-            categoryButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
-            button.classList.add('active');
-            
-            const category = button.dataset.category;
-            
-            // Show all cards or filter by category
-            pluginCards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
-});
-</script>
+<script src="/assets/js/plugins.js"></script>
 {% endif %}
 
 <script>

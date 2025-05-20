@@ -1,8 +1,12 @@
 <!-- src/_includes/partials/footer.njk -->
 <footer>
+    <div class="footer-logo">
+        <img src="/assets/images/favicon.png" alt="Amethyst Network Logo" class="site-logo-footer">
+        <h3>{{ site.siteName }}</h3>
+    </div>
     <div class="footer-content">
         <div class="footer-section">
-            <h3>Server Info</h3>            <p class="server-ip">
+            <h3>Server Info</h3><p class="server-ip">
                 <i class="fas fa-server"></i> Play on: 
                 <span id="server-ip" class="clickable-ip" onclick="copyIP()" title="Click to copy server IP">{{ site.serverIP }}</span>
                 <span class="copy-feedback"></span>

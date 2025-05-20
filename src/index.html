@@ -3,62 +3,70 @@ layout: base.njk
 title: Home - Amethyst Network
 ---
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Welcome to Amethyst Network</h1>
-    <p class="lead">
-      A vanilla-enhanced Minecraft server experience on version 1.21.4
-    </p>
-    <div class="minecraft-copy">
-      <span
-        class="clickable-ip"
-        onclick="copyHomeIP()"
-        title="Click to copy server IP"
-        >{{ site.serverIP }}</span
-      >
-      <span class="copy-feedback"></span>
+<section class="fullscreen-hero">
+  <div class="hero-overlay"></div>
+    <div class="hero-center-content">
+    <div class="hero-logo">
+      <h1 class="hero-title">Amethyst Network</h1>
     </div>
-    <div class="call-to-action">
-      <a href="/about/" class="btn primary-btn">Learn More</a>
-      <a
-        href="{{ site.discordLink }}"
-        target="_blank"
-        rel="noopener"
-        class="btn discord-btn"
-        ><i class="fab fa-discord"></i> Join Our Discord</a
-      >
+    <p class="hero-tagline">Welcome to {{ site.siteName }}'s official website!</p>
+
+    <div class="hero-ip-container">
+      <div class="minecraft-copy">
+        <span class="clickable-ip" onclick="copyHomeIP()" title="Click to copy server IP">{{ site.serverIP }}</span>
+        <span class="copy-feedback"></span>
+      </div>
+    </div>
+    
+    <div class="hero-buttons">
+      <a href="#" class="mc-button primary-button">
+        <i class="fas fa-gamepad"></i> Playing Online: 0
+      </a>
+      <a href="{{ site.bluemapURL }}" class="mc-button secondary-button" target="_blank" rel="noopener">
+        <i class="fas fa-map"></i> Server Map
+      </a>
     </div>
   </div>
 </section>
 
-<section class="server-features">
-  <h2>Server Features</h2>
-  <div class="feature-grid">
-    {% for feature in site.serverFeatures %}
-    <div class="feature-card">
-      <i class="fas fa-gem feature-icon"></i>
-      <p>{{ feature }}</p>
-    </div>
-    {% endfor %}
-  </div>
+<section class="main-navigation">
+  <div class="nav-button-container">
+    <a href="/" class="nav-button active">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="/plugins/" class="nav-button">
+      <i class="fas fa-puzzle-piece"></i>
+      <span>Plugins</span>
+    </a>
+    <a href="/voting/" class="nav-button">
+      <i class="fas fa-vote-yea"></i>
+      <span>Vote</span>
+    </a>
+    <a href="{{ site.bluemapURL }}" target="_blank" class="nav-button">
+      <i class="fas fa-map"></i>
+      <span>BlueMap</span>
+    </a>
+    <a href="{{ site.discordLink }}" target="_blank" class="nav-button">
+      <i class="fab fa-discord"></i>
+      <span>Discord</span>
+    </a>  </div>
 </section>
 
 <section class="map-preview">
   <h2>Explore Our World</h2>
   <div class="map-preview-container">
-    <img
-      src="https://via.placeholder.com/1200x600/5e3b84/ffffff?text=Amethyst+Network+Map"
-      alt="Server Map Preview"
-      class="map-preview-img"
-    />
+    <div class="map-frame">
+      <iframe src="{{ site.bluemapURL }}" title="Amethyst Network BlueMap" class="bluemap-preview"></iframe>
+    </div>
     <div class="map-overlay">
       <a
         href="{{ site.bluemapURL }}"
         target="_blank"
         rel="noopener"
-        class="btn primary-btn"
+        class="mc-button primary-button"
       >
-        <i class="fas fa-map"></i> View Interactive Map
+        <i class="fas fa-map"></i> View Full Map
       </a>
     </div>
   </div>
