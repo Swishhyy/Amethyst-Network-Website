@@ -1,1 +1,1 @@
-{"buildCommand": "NODE_VERSION=18 npm run build"}
+{"buildCommand": "npm install && npm run build"}

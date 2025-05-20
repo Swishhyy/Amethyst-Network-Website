@@ -5,9 +5,10 @@
   "main": "index.js",
   "engines": {
     "node": ">=18"
-  },
-  "scripts": {
+  },  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npm list rimraf || npm install rimraf@3.0.2",
+    "postinstall": "echo \"Node version: $(node -v)\" && echo \"Dependencies installed successfully\"",
     "build": "eleventy",
     "start": "eleventy --serve",
     "dev": "eleventy --serve --quiet",
@@ -26,8 +27,9 @@
     "url": "https://github.com/Swishhyy/Amethyst-Network-Website/issues"
   },
   "homepage": "https://github.com/Swishhyy/Amethyst-Network-Website#readme",
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^3.1.0",
-    "rimraf": "^5.0.5"
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "rimraf": "^3.0.2"
   }
 }

@@ -1,0 +1,6 @@
+# Cloudflare Pages configuration
+build:
+  command: npm install && npm run build
+  output_directory: _site
+  environment:
+    NODE_VERSION: 18
