@@ -236,7 +236,7 @@
 
 .map-preview-img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   object-fit: contain;
   filter: brightness(0.8) saturate(1.2);
