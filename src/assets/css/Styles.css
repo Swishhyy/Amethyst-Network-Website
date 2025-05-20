@@ -392,9 +392,8 @@ footer {
 
 /* Minecraft-themed Hero Section */
 .minecraft-hero {
-  background-color: var(--bg-dark);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(8, 8, 16, 0.85)),
-    url("/Assets/images/amethyst-cave-bg.jpg");
+  background-color: var(--bg-dark);  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(8, 8, 16, 0.85)),
+    url("../images/websitebackground.png");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -811,7 +810,7 @@ footer {
   width: 64px;
   height: 64px;
   margin-bottom: 1rem;
-  background-image: url("/Assets/images/loading-spinner.gif"); /* Will need to be created */
+  background-image: url("../images/favicon.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -998,22 +997,22 @@ footer {
 
 .location-image.spawn-location {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/Assets/images/placeholder-spawn.jpg");
+    url("../images/websitebackground.png");
 }
 
 .location-image.amethyst-cavern {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/Assets/images/placeholder-cavern.jpg");
+    url("../images/websitebackground.png");
 }
 
 .location-image.shopping-district {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/Assets/images/placeholder-market.jpg");
+    url("../images/websitebackground.png");
 }
 
 .location-image.event-arena {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("/Assets/images/placeholder-arena.jpg");
+    url("../images/websitebackground.png");
 }
 
 .location-badge {
