@@ -9,11 +9,15 @@
         <div class="particle p4"></div>
     </div>
 
-    {% include "partials/header.njk" %}
-    <main>
+    {% if title == "Home - Amethyst Network" %}
         {{ content | safe }}
-    </main>
-    {% include "partials/footer.njk" %}
+    {% else %}
+        {% include "partials/header.njk" %}
+        <main>
+            {{ content | safe }}
+        </main>
+        {% include "partials/footer.njk" %}
+    {% endif %}
     
     {% include "partials/scripts.njk" %}
 </body>
