@@ -56,31 +56,24 @@ title: Home - Amethyst Network
 <section class="map-preview">
   <h2>Explore Our World</h2>
   <div class="map-preview-container">
-    <div class="map-frame">
-      <iframe src="{{ site.bluemapURL }}" title="Amethyst Network BlueMap" class="bluemap-preview"></iframe>
+    <div class="map-image">
+      <img src="/assets/images/websitebackground.png" alt="Server Map Preview" class="map-preview-img">
     </div>
-    <div class="map-overlay">
-      <a
-        href="{{ site.bluemapURL }}"
-        target="_blank"
-        rel="noopener"
-        class="mc-button primary-button"
-      >
-        <i class="fas fa-map"></i> View Full Map
-      </a>
+    <div class="map-overlay-simple">
+      <div class="map-overlay-content">
+        <h3>Interactive 3D Map</h3>
+        <p>Explore our Minecraft world with an interactive 3D map</p>
+        <a
+          href="{{ site.bluemapURL }}"
+          target="_blank"
+          rel="noopener"
+          class="mc-button primary-button"
+        >
+          <i class="fas fa-map"></i> View BlueMap
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<script>
-  function copyIP() {
-    const serverIP = document.querySelector(".server-ip").textContent;
-    navigator.clipboard.writeText(serverIP).then(() => {
-      const copyBtn = document.querySelector(".copy-ip");
-      copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-      setTimeout(() => {
-        copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copy IP';
-      }, 2000);
-    });
-  }
-</script>
+<!-- Removed duplicate function - using copyHomeIP from scripts.njk -->
