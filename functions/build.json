@@ -1,0 +1,1 @@
+{"buildCommand": "NODE_VERSION=18 npm run build"}

@@ -1,0 +1,12 @@
+{
+  "name": "amethyst-network-website",
+  "type": "page",
+  "build": {
+    "command": "npm run build",
+    "output_directory": "_site",
+    "js_runtime": "nodejs18",
+    "env": {
+      "NODE_VERSION": "18"
+    }
+  }
+}

@@ -1,7 +1,10 @@
 {
   "build": {
     "command": "npm run build",
-    "publish": "_site"
+    "publish": "_site",
+    "environment": {
+      "NODE_VERSION": "18"
+    }
   },
   "processing": {
     "html": {
