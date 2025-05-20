@@ -1,7 +1,7 @@
 /* Voting Page Styles */
 .voting-hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url("/assets/images/voting-bg.jpg");
+    url("../images/voting-bg.jpg");
   background-size: cover;
   background-position: center;
   padding: 8rem 0;
@@ -185,9 +185,8 @@
 
 .voting-info {
   padding: 8rem 0;
-  background-color: var(--bg-medium);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/assets/images/websitebackground.png");
+  background-color: var(--bg-medium);  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../images/websitebackground.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

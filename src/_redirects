@@ -1,0 +1,11 @@
+# Redirects for Cloudflare Pages
+
+# Handle 404 errors
+/* /404/index.html 404
+
+# Ensure trailing slashes for consistency
+/about /about/ 301
+/plugins /plugins/ 301
+/voting /voting/ 301
+/screenshots /screenshots/ 301
+/server-map /server-map/ 301

@@ -4,7 +4,7 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url('/assets/images/websitebackground.png');
+  background-image: url('../images/websitebackground.png');
   background-size: cover;
   background-position: center;
   display: flex;
