@@ -19,3 +19,7 @@
 [build.processing.images]
   compress = false
   optimize = false
+  webp = false
+
+[build.processing]
+  skip_processing = true

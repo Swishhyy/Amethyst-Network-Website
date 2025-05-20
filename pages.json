@@ -17,9 +17,10 @@
     "js": {
       "bundle": true,
       "minify": true
-    },
-    "images": {
-      "compress": true
+    },    "images": {
+      "compress": false,
+      "optimize": false,
+      "webp": false
     }
   }
 }

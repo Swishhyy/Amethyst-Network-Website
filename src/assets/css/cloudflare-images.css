@@ -1,0 +1,48 @@
+/* Special styling for fixing image display on Cloudflare Pages */
+
+/* Force image rendering to be crisp */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  perspective: 1000px;
+  -webkit-perspective: 1000;
+  will-change: transform;
+}
+
+/* Special handling for map image */
+.map-preview-img {
+  width: auto;
+  max-height: 450px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Ensure proper dimensions for map container */
+.map-preview-container {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+/* Handle map image specifically */
+img[src*="map-example.png"] {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
+  -webkit-perspective: 1000;
+}
+
+/* Fix for Cloudflare's automatic image optimization */
+@supports (-webkit-appearance:none) {
+  .map-preview-img {
+    contain: paint;
+    content-visibility: auto;
+  }
+}
